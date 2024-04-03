@@ -7,8 +7,19 @@ namespace WinFormsApp1
         public Form1()
         {
             InitializeComponent();
+            System.Windows.Forms.Timer t = new System.Windows.Forms.Timer();
+            t.Start();
+            t.Interval = 1000;
+            t.Tick += T_Tick;
         }
 
+        private void T_Tick(object? sender, EventArgs e)
+        {
+            if (button1.Text == "Baku")
+                label1.Text = DateTime.Now.ToString();
+            else if (button1.Text == "London")
+                label1.Text = DateTime.Now.AddHours(-3.0).ToString();
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {

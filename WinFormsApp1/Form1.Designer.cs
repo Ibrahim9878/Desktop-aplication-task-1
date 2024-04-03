@@ -35,11 +35,11 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(724, 78);
+            label1.Location = new Point(619, 84);
             label1.Name = "label1";
             label1.Size = new Size(110, 15);
             label1.TabIndex = 1;
-            label1.Text = "01/04/2024 19:47:38";
+            label1.Text = DateTime.Now.ToString();
             // 
             // pictureBox1
             // 
